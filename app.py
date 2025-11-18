@@ -1,12 +1,12 @@
-# Flask
+# flask
 
-from flask import Flask,render template, request
+from flask import Flask, render_template, request
 
-app = Flask(_name_)
+app = Flask(__name__)
 
-@app.route("/",methods=["GET","POST"])
- def index():
-return(render template("index.html"))
+@app.route("/", methods=["GET","POST"])
+def index():
+    return(render_template("index.html"))
 
-if_name_== "_main_ ":
-  app.run()
+if __name__ == "__main__":
+    app.run()
