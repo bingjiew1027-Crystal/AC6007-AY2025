@@ -31,7 +31,7 @@ def credit():
 @app.route("/CreditPrediction", methods=["GET","POST"])
 def CreditPrediction():
     q = float(request.form.get("q"))
-    model = joblib.load("/workspaces/AC6007-AY2025/credit_model.pkl")
+    model = joblib.load("credit_model.pkl")
     r = model.predict([[q]])
     if r == 1:
         r = "Approved"
